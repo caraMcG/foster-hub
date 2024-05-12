@@ -31,6 +31,10 @@ const Nav = async () => {
                   <>
                     <Link href="/">Home</Link>
                     <Link href="/dashboard">Dashboard</Link>
+                    {session.user.role === "admin" 
+                    ? <Link href="/admin">Admin</Link>
+                    : null
+                    }
                     <UserCard user={ session.user }/>
                     
                   </>

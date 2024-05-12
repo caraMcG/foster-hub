@@ -1,6 +1,7 @@
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider  from "next-auth/providers/credentials";
+import defaultImage from "../../../assets/defaultIcon2.jpg";
 
 export const options = {
     providers: [
@@ -58,7 +59,8 @@ export const options = {
             
             async authorize(credentials){
                 //typically would get this from database, hardcoding for now
-                const user = { id: "5", name: "test", password: "pass", role: "Cred User"}
+                const user = { id: "5", name: "test", password: "pass", image: defaultImage.src,role: "Cred User"}
+                console.log( defaultImage);
                 //verify user credentials here
                 if(credentials?.username === user.name && credentials?.password === user.password){
                     return user

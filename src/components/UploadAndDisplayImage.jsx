@@ -32,6 +32,7 @@ const UploadAndDisplayImage = () => {
           setSelectedImage(event.target.files[0]);
         }}
       />
+      <br/><br/>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { options } from '../api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next';
 import FosterCard from '../../components/FosterCard';
+import { redirect } from 'next/dist/server/api-utils';
 
 
 ////Check how many fosters, this user has and add more fostercards as necessary
@@ -9,6 +10,10 @@ import FosterCard from '../../components/FosterCard';
 export default async function DashboardPage() {
   
   const session = await getServerSession(options);
+
+  if(!session){
+    redirect("/api/auth/signin?callbackUrl=/dashboard")
+  }
 
   return (
     <div>

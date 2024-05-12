@@ -21,6 +21,14 @@ const nunito_sans_xlght = Nunito_Sans({
   adjustFontFallback: false,
 })
 
+const nunito_sans_400 = Nunito_Sans({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-nunito_sans_400',
+  display: 'swap',
+  adjustFontFallback: false,
+})
+
 export const metadata = {
   title: "foster-hub Project",
   description: "Animal foster hub for all your foster needs",
@@ -28,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable} ${nunito_sans_xlght.variable}`}> 
+    <html lang="en" className={`${roboto.variable} ${nunito_sans_xlght.variable} ${nunito_sans_400.variable}`}> 
       <body className="min-h-screen bg-gray-200">
         
         <Nav session={session}/>
