@@ -16,7 +16,7 @@ const UserProfileForm = (props) => {
             
             {/* Available to foster checkbox */}
             <br/><br/><hr/>
-            <label htmlFor='checkbox' className='font-semibold'>Availability? (select all that apply)</label><br/>
+            <label htmlFor='checkbox' className='font-semibold'>Availability? <span className='italic font-normal'>(select all that apply)</span></label><br/>
             <input type="checkbox"/> Short Term
             <br/>
             <input type="checkbox"/> Long Term
@@ -56,7 +56,7 @@ const UserProfileForm = (props) => {
             {/* Submit Account Changes */}
             <br/><br/><br/>
             <div className='text-center'>
-                <button className="px-8 py-2 bg-emerald rounded-lg" type="submit">Save Changes
+                <button className="px-8 py-4 bg-emerald rounded-lg" type="submit">Save Changes
                 </button>
             </div>
         </form>

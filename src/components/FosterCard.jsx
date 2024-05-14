@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const FosterCard = () => {
 
-  const [fosterCheck, setFosterCheck] = useState([]);
+  const [fosterCheckList, setFosterCheckList] = useState([]);
 
   return (
     <div className='flex-column'>
@@ -12,7 +12,8 @@ const FosterCard = () => {
             <p className='mb-4'>info goes here about your foster dog<br/>
             Checklist to adoption!
             </p>
-            <input type="checkbox"/> Medical Clear<br/>
+            {/* medical clearance will be reflected to user but only admin can change it */}
+            <input disabled type="checkbox"/> Medical Clear<br/> 
             <input type="checkbox"/> Submitted Bio<br/>
             <input type="checkbox"/> Submitted Photos<br/>
         </div>
