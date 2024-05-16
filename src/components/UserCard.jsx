@@ -1,12 +1,18 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 const UserMenu = () => (
   <div className=''>
-    <Link className="block px-8 py-2 hover:bg-emerald hover:rounded-t-lg" href="/userprofile">Profile</Link>
-    <Link className="block px-8 py-2 font-bold hover:bg-emerald hover:rounded-b-lg" href="/api/auth/signout?callbackUrl=/">Logout</Link>
+    <Link 
+      className="block px-8 py-2 hover:bg-emerald hover:rounded-t-lg" 
+      href="/userprofile">Profile</Link>
+    <Link 
+      className="block px-8 py-2 font-bold hover:bg-emerald hover:rounded-b-lg" 
+      href="/api/auth/signout?callbackUrl=/">Logout</Link>
   </div>
 )
 
@@ -19,7 +25,9 @@ const UserCard = ( props ) => {
 
   return (
     <div className="flex flex-col items-center justify-evenly">
-      <div className='absolute'>     
+      <FontAwesomeIcon icon={faBell} size="xl" className='mr-32 cursor-pointer' style={{color: "#c0c0c0",}} /> 
+
+      <div className='absolute'>    
           { image ? 
                 <Image 
                 src = {image} 
@@ -37,7 +45,7 @@ const UserCard = ( props ) => {
        
       </div>
      
-      <div className="absolute z-50 mt-40 bg-mint rounded-lg hover:triangle.bg-emerald"> 
+      <div className="absolute z-50 mt-40 bg-mint rounded-lg shadow-xl" onClick ={() => setToggleMenu(!toggleMenu)}> 
           { toggleMenu && (
               <>
                 <div className='triangle'> </div>

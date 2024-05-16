@@ -59,7 +59,7 @@ export const options = {
             
             async authorize(credentials){
                 //typically would get this from database, hardcoding for now
-                const user = { id: "5", name: "test", password: "pass", image: defaultImage.src,role: "Cred User"}
+                const user = { id: "5", name: "test", password: "pass", image: defaultImage.src, role: "admin"}
                 console.log( defaultImage);
                 //verify user credentials here
                 if(credentials?.username === user.name && credentials?.password === user.password){

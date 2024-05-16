@@ -17,7 +17,7 @@ const FosterCard = () => {
             <input type="checkbox"/> Submitted Bio<br/>
             <input type="checkbox"/> Submitted Photos<br/>
         </div>
-      </div>
+    </div>
   );
 };
 

@@ -23,7 +23,6 @@ export default async function DashboardPage() {
           <p className='py-5 text-center'>Hello { session.user.name },<br/>Welcome to your Dashboard!</p>
           <h2 className='mx-10 py-2 text-xl'>Current Fosters</h2><br/>
           <section className='flex flex-wrap justify-center gap-4 my-10'>
-          
             <FosterCard/>
             <FosterCard/>
             <FosterCard/>

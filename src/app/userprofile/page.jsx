@@ -1,6 +1,6 @@
 import React from 'react';
 import UploadAndDisplayImage from '../../components/UploadAndDisplayImage';
-import UserProfileForm from '../../components/UserProfileForm';
+import UserProfileNav from '../../components/UserProfileNav';
 import { options } from '../api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next';
 
@@ -11,27 +11,19 @@ export default async function UserProfilePage() {
     
   const session = await getServerSession(options);
 
-
   return (
-    <div>
-
+    <div className='flex-1 shadow-xl bg-white rounded-lg p-8'>
       { session ?
-        <>
-        <div className='flex-column content-center justify-center bg-white px-48 py-10 rounded-lg border border-gray-400 '>
-          <h2 className='text-xl text-center'>Your Profile</h2><br/>
-            <div className='flex flex-1 justify-center content-center'>
+        <> 
+         
+                <UserProfileNav user={session.user} />
                 
               {/* Avatar Image only for cred users */}
               { session.user.image
                 ? null 
                 :  <UploadAndDisplayImage/>
               }
-
-              < UserProfileForm user={session} />
-                 
-                   
-            </div>
-          </div>
+              <p className='italic text-center font-medium'>Account Type: {session.user.role}</p>
         </>
         : null
       }

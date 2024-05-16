@@ -11,11 +11,10 @@ const Nav = async () => {
 
   const session = await getServerSession(options);
 
-// export default function Nav() {
   return (
     // <header className='bg-base_black text-magnolia'>
       <header className="bg-white">
-        <nav className='flex items-center justify-between p-6 lg:px-8 h-20 border border-t-0 border-l-0 border-r-0 border-b-gray-300' aria-label='Global'>
+        <nav className='flex items-center justify-between p-6 lg:px-8 h-16 border border-t-0 border-l-0 border-r-0 border-b-gray-300' aria-label='Global'>
             <div className="flex flex-1 justify-between items-center px-10"> 
               
               <Image 
@@ -31,11 +30,12 @@ const Nav = async () => {
                   <>
                     <Link href="/">Home</Link>
                     <Link href="/dashboard">Dashboard</Link>
-                    <Link href="/dashboard">Requests</Link>
+                    <Link href="/requests">Requests</Link>
                     {session.user.role === "admin" 
                     ? <Link href="/admin">Admin</Link>
                     : null
                     }
+ 
                     <UserCard user={ session.user }/>
                     
                   </>
