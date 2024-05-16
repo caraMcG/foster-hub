@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # Foster-hub
 
 A web application that uses NextAuth for authentication and user roles. 
-Middleware is used too protect routes if a user is not signed in. 
+Middleware is used to protect routes if a user is not signed in. 
 
 ## How to run
 ```
