@@ -26,5 +26,5 @@ Current to do list:
 
 ## References
 
-https://tailwindcomponents.com/cheatsheet/
-https://nextjs.org/learn/dashboard-app/setting-up-your-database
+* https://tailwindcomponents.com/cheatsheet/
+* https://nextjs.org/learn/dashboard-app/setting-up-your-database
