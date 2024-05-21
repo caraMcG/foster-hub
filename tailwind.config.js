@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
@@ -34,5 +35,19 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+		plugin(function ({ addUtilities }) {
+			addUtilities({
+				'.drag-none': {
+          '-webkit-user-drag': 'none', /* For WebKit browsers */
+          'user-drag': 'none', /* For standard browsers */
+          '-moz-user-drag': 'none',  /* Disable drag in Firefox */
+          'user-select': 'none', /* Disable text selection for better UX */
+          '-webkit-user-select': 'none', /* Disable text selection in WebKit browsers */
+          '-moz-user-select': 'none', /* Disable text selection in Firefox */
+          '-ms-user-select': 'none', /* Disable text selection in IE/Edge */
+				}
+			});
+		})
+	],
 };

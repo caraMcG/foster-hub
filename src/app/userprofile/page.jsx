@@ -13,6 +13,7 @@ export default async function UserProfilePage() {
 
   return (
     <div className='flex-1 shadow-xl bg-white rounded-lg p-8'>
+      <h2 className='text-xl text-left'>Your Account</h2>
       { session ?
         <> 
          

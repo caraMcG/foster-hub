@@ -7,42 +7,50 @@ const UserAvailabiltyForm = (props) => {
     // let session = props.user;
 
     return (
-    <div className='flex flex-column justify-center'>
-        <form className='py-10 mb-6'>
-            <p><span className='text-red-600'>*</span> required fields</p><br/>
-            <div className='mb-4'> 
-                <label htmlFor='available' className='block font-semibold '>Are you available to foster or are currently fostering?</label>
-                <span className='block italic text-sm mb-2'>select no if you are not available or are no longer open to fostering</span>
-                <input type="radio" className='mb-2 leading-tight'/> Yes, I am currently fostering or am available to foster<br/>
-                <input type="radio" className='mb-6 leading-tight'/> No, I am taking a break or am no longer available to foster
+        // h-full
+    // <div className='flex flex-column justify-center h-full'>
+    <>
+        <form className='flex-2 mb-4 self-center'>            
+            <div className='ml-24 mb-4'> 
+                <fieldset>
+                    <legend className='block font-semibold mb-2'>Are you available to foster or are currently fostering?</legend>
+                    <input type="radio" id="FosterYes" name="FosterCheckbox" className='mb-2 leading-tight'/><label htmlFor='FosterYes'> Yes, I am currently fostering and/or am available</label><br/>
+                    <input type="radio" id="FosterNo" name="FosterCheckbox" className='mb-3 leading-tight'/><label htmlFor='FosterNo'> No, I am not currently available</label>
+                </fieldset>
             </div>
 
-
             {/* Available to foster checkbox */}
-            <div className='mb-4'>
-                <label htmlFor='checkbox' className='block font-semibold mb-2'>Availability? <span className='italic font-normal'>(select all that apply)</span></label>
-                <input type="checkbox" className='mb-2 leading-tight'/> <span>Short Term / Temporary Support</span><br/>
-                <input type="checkbox" className='mb-2 leading-tight'/> <span>Long Term </span><br/>
-                <input type="checkbox" className='mb-6 leading-tight'/> <span>Day Outings </span> <br/>
+            <div className='ml-24 mb-4 '>
+                <fieldset>
+                    <legend className='block font-semibold mb-2'>Availability? <span className='italic font-normal'>(select all that apply)</span></legend>
+                    <input type="checkbox" id="AvailableShort" name="Availability" className='mb-2 leading-tight'/> <label htmlFor='AvailableShort'>Short Term / Temporary Support</label><br/>
+                    <input type="checkbox" id="AvailableLong" name="Availability" className='mb-2 leading-tight'/> <label htmlFor='AvailableLong'>Long Term </label><br/>
+                    <input type="checkbox" id="AvailableSpecific" name="Availability" className='mb-3 leading-tight'/> <label htmlFor='AvailableSpecific'>Day Outings </label> <br/>
+                </fieldset>
             </div>
 
             {/* Short Term Availability */}
-            <div className='mb-6'>
-                <label htmlFor='radio' className='block font-semibold mb-2'>Short Term Availability?</label>
-                <input type="radio" className='mb-2 leading-tight'/> Any day <br/>
-                <input type="radio" className='mb-2 leading-tight'/> Weekdays only <br/>
-                <input type="radio" className='mb-2 leading-tight'/> Weekends only <br/>
-                <input type="radio" className='mb-3 leading-tight'/> Specific dates:
+            <div className='ml-24 mb-6'>
+                <fieldset>
+                    <legend className='block font-semibold mb-2'>Short Term Availability?</legend>
+                    <input type="radio" id="ShortAny" name="ShortDetails" className='mb-2 leading-tight'/><label htmlFor='ShortAny'> Any day</label><br/>
+                    <input type="radio" id="ShortWeekdays" name="ShortDetails" className='mb-2 leading-tight'/><label htmlFor='ShortWeekdays'> Weekdays only</label><br/>
+                    <input type="radio" id="ShortWeekends" name="ShortDetails" className='mb-2 leading-tight'/><label htmlFor='ShortWeekends'> Weekends only</label><br/>
+                    <input type="radio" id="ShortSpecific" name="ShortDetails" className='mb-3 leading-tight'/><label htmlFor='ShortSpecific'>  Specific dates:</label>
+                </fieldset>
             </div>
            
              {/* Submit Changes */}
-             <div className='text-center pt-16'>
+             {/* pt-16 */}
+             {/* mt-10 */}
+             <div className='mt-10 text-center'>
                 <button className="px-8 py-4 bg-emerald rounded-lg" type="submit">
                     Save Changes
                 </button>
             </div>
         </form>
-    </div>
+    {/* </div> */}
+    </>
   );
 };
 

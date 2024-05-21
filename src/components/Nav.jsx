@@ -14,7 +14,7 @@ const Nav = async () => {
   return (
     // <header className='bg-base_black text-magnolia'>
       <header className="bg-white">
-        <nav className='flex items-center justify-between p-6 lg:px-8 h-16 border border-t-0 border-l-0 border-r-0 border-b-gray-300' aria-label='Global'>
+        <nav className='flex items-center justify-between p-6 lg:px-8 h-16 border border-t-0 border-l-0 border-r-0 border-b-gray-300' aria-label='Primary navigation'>
             <div className="flex flex-1 justify-between items-center px-10"> 
               
               <Image 

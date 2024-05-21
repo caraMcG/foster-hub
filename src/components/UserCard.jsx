@@ -35,10 +35,10 @@ const UserCard = ( props ) => {
                 height="50" 
                 className="max-w-none aspect-auto rounded-full cursor-pointer"
                 quality={100}
-                objectFit= "contain"
+                // objectFit= "contain"
                 draggable = 'false'
                 onClick ={() => setToggleMenu(!toggleMenu)}
-                alt= {`${name}'s Picture`}/>
+                alt= {`${name}'s Clickable Picture`}/>
             : null
           }
           {/* <span className="p-3">{name}</span> */}
