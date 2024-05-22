@@ -17,18 +17,26 @@ const UserProfileNav =  (props) => {
   return ( 
     <>
         <header>
+            <h2 className='text-xl text-center mb-10'>Your Account Info</h2> 
             <nav className='flex items-center justify-center px-14 h-12 border border-t-0 border-l-0 border-r-0 border-b-gray-300' aria-label='Global'>
                 <div className="flex gap-14 items-center drag-none"> 
-                    <ul className="flex drag-none">
+                    <ul className="flex gap-12 drag-none">
                         <li className="flex-1 mr-2 drag-none">
-                            <a className={`${profilePage == "Availability" ? "bg-mint" : "bg-gray-200" } text-center block border rounded-sm py-2 px-4 hover:bg-emerald text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Availability</a>
+                            <a className='font-semibold group transition duration-300 text-center rounded-sm py-2 px-4 text-black drag-none' href="#" onClick={(e)=>{handleClick(e)}}>Availability
+                                <span className={`mt-1.5 block ${profilePage === 'Availability' ? "max-w-full" : "max-w-0 group-hover:max-w-full"} transition-all duration-500 h-1 bg-indigo-500`}></span>
+                            </a>
                         </li>
+
                         <li className="flex-1 mr-2">
-                            <a className={`${profilePage == "Account" ? " bg-mint" : "bg-gray-200"} text-center block border rounded-sm py-2 px-4 hover:bg-emerald text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Account</a>
+                            <a className='font-semibold group transition duration-300 text-center rounded-sm py-2 px-4 text-black drag-none' href="#" onClick={(e)=>{handleClick(e)}}>Account
+                                <span className={`mt-1.5 block ${profilePage === 'Account' ? "max-w-full" : "max-w-0 group-hover:max-w-full"} transition-all duration-500 h-1 bg-indigo-500`}></span>
+                            </a>
                         </li>
-                        <li className="flex-1">
-                            <a className={`${profilePage == "Notifications" ? "bg-mint" : "bg-gray-200" } text-center block border rounded-sm py-2 px-4 hover:bg-emerald text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Notifications</a>
-                        </li>
+                        {/* <li className="flex-1">
+                            <a className='font-semibold group transition duration-300 text-center rounded-sm py-2 px-4 text-black drag-none' href="#" onClick={(e)=>{handleClick(e)}}>Notifications
+                                <span className={`block ${profilePage === 'Notifications' ? "max-w-full" : "max-w-0 group-hover:max-w-full"} transition-all duration-500 h-0.5 bg-indigo-500`}></span>
+                            </a>
+                        </li> */}
                     </ul>
                 </div>
             </nav>

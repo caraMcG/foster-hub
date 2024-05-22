@@ -16,9 +16,9 @@ export default async function UserProfilePage() {
 
         { session ?
           <>  
-              <div className='flex-1 shadow-xl bg-white rounded-lg p-8'>
+              <div className='flex-1 shadow-xl bg-white rounded-lg px-12 py-8'>
                 {/* <div className='flex-1 self-center w-full'> */}
-                <h2 className='text-xl text-left mb-6'>Your Account</h2>    
+                  
                 <UserProfileNav user={session.user} />
                   
                 {/* Avatar Image only for cred users */}

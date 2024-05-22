@@ -7,13 +7,10 @@ const UserAvailabiltyForm = (props) => {
     // let session = props.user;
 
     return (
-        // h-full
-    // <div className='flex flex-column justify-center h-full'>
     <>
     <div className='flex h-full flex-col justify-between h-full max-w-md'>
-        {/* <form className='flex-1 mb-4 self-center'>             */}
         <form className='flex flex-col flex-grow'>   
-            <div className='mb-4'> 
+            <div className='mb-2'> 
                 <fieldset>
                     <legend className='block font-semibold mb-2'>Are you available to foster or are currently fostering?</legend>
                     <input type="radio" id="FosterYes" name="FosterCheckbox" className='mb-2 leading-tight'/><label htmlFor='FosterYes'> Yes, I am currently fostering and/or am available</label><br/>
@@ -22,7 +19,7 @@ const UserAvailabiltyForm = (props) => {
             </div>
 
             {/* Available to foster checkbox */}
-            <div className='mb-4 '>
+            <div className='mb-2 '>
                 <fieldset>
                     <legend className='block font-semibold mb-2'>Availability? <span className='italic font-normal'>(select all that apply)</span></legend>
                     <input type="checkbox" id="AvailableShort" name="Availability" className='mb-2 leading-tight'/> <label htmlFor='AvailableShort'>Short Term / Temporary Support</label><br/>
@@ -32,7 +29,7 @@ const UserAvailabiltyForm = (props) => {
             </div>
 
             {/* Short Term Availability */}
-            <div className='mb-6'>
+            <div className='mb-2'>
                 <fieldset>
                     <legend className='block font-semibold mb-2'>Short Term Availability?</legend>
                     <input type="radio" id="ShortAny" name="ShortDetails" className='mb-2 leading-tight'/><label htmlFor='ShortAny'> Any day</label><br/>
@@ -43,10 +40,8 @@ const UserAvailabiltyForm = (props) => {
             </div>
            
              {/* Submit Changes */}
-             {/* pt-16 */}
-             {/* mt-10 */}
              <div className='mt-auto text-center'>
-                <button className="px-8 py-4 bg-quartz rounded-lg" type="submit">
+                <button className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 rounded-lg text-white font-semibold" type="submit">
                     Save Changes
                 </button>
             </div>
