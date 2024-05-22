@@ -7,7 +7,7 @@ const FosterCard = () => {
   const [fosterCheckList, setFosterCheckList] = useState([]);
 
   return (
-    <div className='flex-column'>
+    <div className='flex-2 flex-col'>
         <div className='bg-white p-24 rounded-lg'>
             <p className='mb-4'>info goes here about your foster dog<br/>
             Checklist to adoption!

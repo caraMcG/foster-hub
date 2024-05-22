@@ -21,22 +21,22 @@ const UserProfileNav =  (props) => {
                 <div className="flex gap-14 items-center drag-none"> 
                     <ul className="flex drag-none">
                         <li className="flex-1 mr-2 drag-none">
-                            <a className={`${profilePage == "Availability" ? "bg-emerald" : "bg-gray-200" } text-center block border rounded-sm py-2 px-4 hover:bg-mint text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Availability</a>
+                            <a className={`${profilePage == "Availability" ? "bg-mint" : "bg-gray-200" } text-center block border rounded-sm py-2 px-4 hover:bg-emerald text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Availability</a>
                         </li>
                         <li className="flex-1 mr-2">
-                            <a className={`${profilePage == "Account" ? " bg-emerald" : "bg-gray-200"} text-center block border rounded-sm py-2 px-4 hover:bg-mint text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Account</a>
+                            <a className={`${profilePage == "Account" ? " bg-mint" : "bg-gray-200"} text-center block border rounded-sm py-2 px-4 hover:bg-emerald text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Account</a>
                         </li>
                         <li className="flex-1">
-                            <a className={`${profilePage == "Notifications" ? "bg-emerald" : "bg-gray-200" } text-center block border rounded-sm py-2 px-4 hover:bg-mint text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Notifications</a>
+                            <a className={`${profilePage == "Notifications" ? "bg-mint" : "bg-gray-200" } text-center block border rounded-sm py-2 px-4 hover:bg-emerald text-black drag-none`} href="#" onClick={(e)=>{handleClick(e)}}>Notifications</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         {/* h-[600px] */}
-        <section className='h-full flex flex-col justify-center py-8 h-[660px]'>
-            <div className='flex-1 self-center'>
-                <p className='text-center'><span className='text-red-600'>*</span> required fields</p>
+        <section className='flex flex-col justify-center items-center py-8 h-[600px]'>
+            <div className='flex-1 mb-6 grow-0 text-center '>
+                <p className=''><span className='text-red-600'>*</span> required fields</p>
             </div> 
                 { profilePage === "Account"
                     

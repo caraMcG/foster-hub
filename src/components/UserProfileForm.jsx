@@ -15,7 +15,9 @@ const UserProfileForm = (props) => {
         // h-full
     // <div className='flex flex-column flex-end justify-between h-full'>
      <> 
-        <form className='flex-2 mb-4 self-center'>
+     <div className='flex h-full flex-col justify-between h-full max-w-md'>
+        {/* <form className='flex-1 mb-4 self-center'> */}
+        <form className='flex flex-col flex-grow'>
             <fieldset>
                 <legend className='hidden'></legend>
                 {/* Profile Name */}
@@ -68,13 +70,13 @@ const UserProfileForm = (props) => {
             </fieldset>
 
             {/* Submit Changes */}
-            <div className='mt-10 text-center'>
-                <button className="px-8 py-4 bg-emerald rounded-lg text-center" type="submit">
+            <div className='mt-auto text-center '>
+                <button className="px-8 py-4 bg-quartz rounded-lg text-center" type="submit">
                     Save Changes
                 </button>
             </div>
         </form>
-    {/* </div> */}
+    </div>
     </>
   );
 };

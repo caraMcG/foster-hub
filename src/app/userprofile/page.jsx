@@ -12,23 +12,28 @@ export default async function UserProfilePage() {
   const session = await getServerSession(options);
 
   return (
-    <div className='flex-1 shadow-xl bg-white rounded-lg p-8'>
-      <h2 className='text-xl text-left'>Your Account</h2>
-      { session ?
-        <> 
-         
+    <div>
+
+        { session ?
+          <>  
+              <div className='flex-1 shadow-xl bg-white rounded-lg p-8'>
+                {/* <div className='flex-1 self-center w-full'> */}
+                <h2 className='text-xl text-left mb-6'>Your Account</h2>    
                 <UserProfileNav user={session.user} />
-                
-              {/* Avatar Image only for cred users */}
-              { session.user.image
-                ? null 
-                :  <UploadAndDisplayImage/>
-              }
-              <p className='italic text-center font-medium'>Account Type: {session.user.role}</p>
-        </>
-        : null
-      }
-      
+                  
+                {/* Avatar Image only for cred users */}
+                { session.user.image
+                  ? null 
+                  :  <UploadAndDisplayImage/>
+                }
+                <p className='italic text-center font-medium'>Account Type: {session.user.role}</p>
+              </div>
+          </>
+          : null
+    
+        }
+        {/* </div> */}
+  
     </div>
   )
 }

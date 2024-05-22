@@ -13,8 +13,14 @@ export default async function RequestsPage() {
     <div>
       { session ?
         <>
-        <div className='bg-white px-48 py-10 rounded-lg border border-gray-400 '>
-          <h2 className='text-xl text-center'>Requests Page</h2><br/>
+        <div className='flex-1 shadow-xl bg-white rounded-lg p-8'>
+          <h2 className='text-xl text-left mb-6'>Requests Page</h2>
+          
+          <section className='flex flex-col justify-center items-center py-8'>
+            <div className='flex-1 mb-6 grow-0 text-center '>
+                  <p className=''>Placeholder info here hi</p>
+              </div> 
+          </section>
               
         </div>
         </>
