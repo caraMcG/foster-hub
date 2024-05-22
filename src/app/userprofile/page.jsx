@@ -17,7 +17,6 @@ export default async function UserProfilePage() {
         { session ?
           <>  
               <div className='flex-1 shadow-xl bg-white rounded-lg px-12 py-8'>
-                {/* <div className='flex-1 self-center w-full'> */}
                   
                 <UserProfileNav user={session.user} />
                   

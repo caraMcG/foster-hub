@@ -68,7 +68,7 @@ const UserProfileForm = (props) => {
 
             {/* Submit Changes */}
             <div className='mt-auto text-center '>
-                <button className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 rounded-lg text-center text-white font-semibold" type="submit">
+                <button className="px-8 py-4 bg-indigo-600 hover:bg-indigo-600 rounded-lg text-center text-white font-semibold" type="submit">
                     Save Changes
                 </button>
             </div>

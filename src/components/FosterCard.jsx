@@ -7,15 +7,17 @@ const FosterCard = () => {
   const [fosterCheckList, setFosterCheckList] = useState([]);
 
   return (
-    <div className='flex-2 flex-col'>
-        <div className='bg-white p-24 rounded-lg'>
-            <p className='mb-4'>info goes here about your foster dog<br/>
-            Checklist to adoption!
-            </p>
+    <div className='flex-2 flex-col shadow-xl bg-white rounded-lg'>
+        <div className='p-24'>
+            <p className='mb-4'>info goes here about your foster dog</p>
+
             {/* medical clearance will be reflected to user but only admin can change it */}
-            <input disabled type="checkbox"/> Medical Clear<br/> 
-            <input type="checkbox"/> Submitted Bio<br/>
-            <input type="checkbox"/> Submitted Photos<br/>
+            <fieldset>
+              <legend className='mb-2'>Checklist to adoption!</legend>
+              <input disabled type="checkbox" id="checklistMedical" name="fostercheckList" className='mb-2 leading-tight'/><label htmlFor="checklistMedical">Medical Clear</label> <br/> 
+              <input type="checkbox" id="checklistBio" name="fostercheckList" className='mb-2 leading-tight'/> <label htmlFor="checklistBio">Submitted Bio</label><br/>
+              <input type="checkbox" id="checklistPhotos" name="fostercheckList" className='mb-2 leading-tight'/> <label htmlFor="checklistPhotos">Submitted Photos</label><br/>
+            </fieldset>
         </div>
     </div>
   );

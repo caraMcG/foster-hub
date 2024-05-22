@@ -18,13 +18,7 @@
 
 body {
   /* color: rgb(var(--foreground-rgb)); */
-  color: black;
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+  color: #252424;
 }
 
 hr{
@@ -42,6 +36,16 @@ p, ol{
 ol{
   list-style: circle;
 }
+
+.mainlink{
+  font-family: var(--font-roboto_900);
+}
+
+.public_paragraph{
+  font-family: var(--font-nunito_sans_400);
+}
+
+
 
 .triangle{
   position:absolute;
