@@ -12,11 +12,11 @@ export default async function UserProfilePage() {
   const session = await getServerSession(options);
 
   return (
-    <div>
+    <div className='flex justify-center items-center w-1/3'>
 
         { session ?
           <>  
-              <div className='flex-1 shadow-xl bg-white rounded-lg px-12 py-8'>
+              <div className=' flex flex-col flex-1 shadow-xl bg-white rounded-lg px-12 py-8 self-center'>
                   
                 <UserProfileNav user={session.user} />
                   
@@ -31,7 +31,6 @@ export default async function UserProfilePage() {
           : null
     
         }
-        {/* </div> */}
   
     </div>
   )

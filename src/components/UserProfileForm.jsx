@@ -13,7 +13,7 @@ const UserProfileForm = (props) => {
 
     return (
      <> 
-     <div className='flex h-full flex-col justify-between h-full max-w-md'>
+     <div className='flex h-full flex-col justify-between max-w-md'>
         <form className='flex flex-col flex-grow'>
             <fieldset>
                 <legend className='hidden'></legend>
@@ -68,7 +68,7 @@ const UserProfileForm = (props) => {
 
             {/* Submit Changes */}
             <div className='mt-auto text-center '>
-                <button className="px-8 py-4 bg-indigo-600 hover:bg-indigo-600 rounded-lg text-center text-white font-semibold" type="submit">
+                <button className="px-8 py-4 bg-btnsecond hover:bg-btnhovers rounded-lg text-center text-white font-semibold" type="submit">
                     Save Changes
                 </button>
             </div>

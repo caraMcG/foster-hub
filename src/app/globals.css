@@ -45,11 +45,10 @@ ol{
   font-family: var(--font-nunito_sans_400);
 }
 
-
-
 .triangle{
   position:absolute;
-  background-color: rgb(113, 180, 141);
+  background-color: rgb(69,123,157);
+  /* background-color: rgb(113, 180, 141); */
   top: -18px;
   left: 40%;
   width: 20px;
@@ -60,7 +59,6 @@ ol{
   transition-duration: 250ms;
   z-index: -99;
 }
-
 
 @layer utilities {
   .text-balance {

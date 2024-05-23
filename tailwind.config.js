@@ -16,17 +16,20 @@ module.exports = {
     },
     extend: {
       textColor: {
-        "emerald": "#86CB92",
-        "mint": "#71B48D",
-        "quartz": "#A4969B",
-        "magnolia": "#FCF7FF"
+        "textdark" : "#1D3557",
+        "textmuted" :"#457B9D",
+        "text": "#1D3557",
+        "links": "#E63946"
       },
       backgroundColor: {
-        "emerald": "#86CB92",
-        "mint":"#71B48D",
-        "quartz": "#A4969B",
-        "magnolia": "#FCF7FF",
         "base_black":"#1a1b20",
+
+        "headerwhite": "#F1FAEE",
+        "softblue": "#A8DADC",
+        "btnprimary":"#E63946",  //redish
+        "btnsecond":"#457b9d", ///dark soft blue
+        "btnhoverp":"#D62828",
+        "btnhovers":"#2B5C75",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -37,8 +37,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable} ${nunito_sans_xlght.variable} ${nunito_sans_400.variable}  overflow-y-scroll`}> 
-      <body className="min-h-screen bg-slate-100">
-      {/* bg-gray-100 */}
+      <body className="min-h-screen bg-slate-200">
+      {/* bg-softblue */}
+      {/* bg-slate-100 */}
         <Nav session={session}/>
 
         <div className="flex justify-center items-center py-12 px-16">

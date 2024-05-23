@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 const UserMenu = () => (
-  <div className=''>
+  <div>
     <Link 
-      className="block px-8 py-2 hover:bg-emerald hover:rounded-t-lg" 
+      className="block font-semibold text-textdark px-8 py-2 hover:bg-softblue hover:font-bold  hover:rounded-t-lg" 
       href="/userprofile">Profile</Link>
     <Link 
-      className="block px-8 py-2 font-bold hover:bg-emerald hover:rounded-b-lg" 
+      className="block font-semibold text-textdark px-8 py-2 hover:bg-softblue hover:font-bold hover:rounded-b-lg" 
       href="/api/auth/signout?callbackUrl=/">Logout</Link>
   </div>
 )
@@ -45,12 +45,12 @@ const UserCard = ( props ) => {
        
       </div>
      
-      <div className="absolute z-50 mt-40 bg-mint rounded-lg shadow-xl" onClick ={() => setToggleMenu(!toggleMenu)}> 
+      <div className="absolute z-50 mt-40 bg-btnsecond rounded-lg shadow-xl" onClick ={() => setToggleMenu(!toggleMenu)}> 
           { toggleMenu && (
-              <>
-                <div className='triangle'> </div>
-                <UserMenu/>
-              </>  
+            <>
+              <div className='triangle'></div>
+              <UserMenu/>
+            </>
           )}
       </div>
     </div>

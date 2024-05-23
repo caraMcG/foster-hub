@@ -8,7 +8,7 @@ const UserAvailabiltyForm = (props) => {
 
     return (
     <>
-    <div className='flex h-full flex-col justify-between h-full max-w-md'>
+    <div className='flex h-full flex-col justify-between max-w-md'>
         <form className='flex flex-col flex-grow'>   
             <div className='mb-2'> 
                 <fieldset>
@@ -41,7 +41,7 @@ const UserAvailabiltyForm = (props) => {
            
              {/* Submit Changes */}
              <div className='mt-auto text-center'>
-                <button className="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 rounded-lg text-white font-semibold" type="submit">
+                <button className="px-8 py-4 bg-btnsecond hover:bg-btnhovers  rounded-lg text-white font-semibold" type="submit">
                     Save Changes
                 </button>
             </div>
