@@ -37,6 +37,10 @@ ol{
   list-style: circle;
 }
 
+legend{
+  font-family: var(--font-roboto_900);
+}
+
 .mainlink{
   font-family: var(--font-roboto_900);
 }
@@ -47,7 +51,8 @@ ol{
 
 .triangle{
   position:absolute;
-  background-color: rgb(69,123,157);
+  background-color: #A8DADC;
+  /* background-color: rgb(69,123,157); */
   /* background-color: rgb(113, 180, 141); */
   top: -18px;
   left: 40%;

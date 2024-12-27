@@ -1,7 +1,8 @@
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider  from "next-auth/providers/credentials";
-import defaultImage from "../../../assets/defaultIcon2.jpg";
+import connectDB from "../../../../libs/mongodb";
+import User from "../../../../models/User";
 
 export const options = {
     providers: [
@@ -58,27 +59,55 @@ export const options = {
             },
             
             async authorize(credentials){
-                //typically would get this from database, hardcoding for now
-                const user = { id: "5", name: "test", password: "pass", image: defaultImage.src, role: "admin"}
-                console.log( defaultImage);
-                //verify user credentials here
-                if(credentials?.username === user.name && credentials?.password === user.password){
-                    return user
+                await connectDB();
+
+                try{
+                    //look for user
+                    const user = await User.findOne({ name: credentials?.username });
+                    //if no user, return null
+                    if(!user){
+                        return null;
+                    }
+                    //verify user 
+                    if(credentials?.password === user.password_hash && credentials?.username === user.name){
+                        return { id: user._id, name: user.name, image: user.image, role: user.role};
+                        // return user;
+                    }else{
+                        return null;
+                    }
+
+                }catch(error){
+                    console.error("Error authorizing user:", error);
+                    return null;
                 }
-                else{
-                    return null
-                }
+
+                // const defaultImage = "/assets/defaultIcon6.jpg";
+                // //typically would get this from database, hardcoding for now
+                // const user = { id: "5", name: "test", password: "pass", image: defaultImage, role: "admin"}
+                // //verify user credentials here
+                // if(credentials?.username === user.name && credentials?.password === user.password){
+                //     return user
+                // }
+                // else{
+                //     return null
+                // }
             }
         })
     ],
     callbacks: {
         async jwt({ token, user }){
-            if (user) token.role = user.role
+            if (user){
+                token.id = user.id;
+                token.role = user.role;
+            }
             return token
         },
         //if using in client components
         async session({ session, token }){
-            if (session?.user) session.user.role = token.role
+            if (session?.user) {
+                session.user.id = token.id;
+                session.user.role = token.role;
+            }
             return session
         }
     }

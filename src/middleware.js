@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { NextRequest } from "next/server";
 import { withAuth } from "next-auth/middleware";
 
 //without a matcher, will protect all pages with next-auth
@@ -13,6 +12,10 @@ export default withAuth (function middleware(req){
         return NextResponse.rewrite(new URL("/denied", req.url));
 
     }
+    // Protect admin API routes
+    if (req.nextUrl.pathname.startsWith("/api/admin") && req.nextauth.token.role !== "admin") {
+        return NextResponse.rewrite(new URL("/denied", req.url));
+    }
 },
 {
     callbacks:{
@@ -20,6 +23,6 @@ export default withAuth (function middleware(req){
     }
 });
 
-
 //applies next-auth only to matching routes
-export const config = { matcher: ["/dashboard", "/admin", "/userprofile"] };
+export const config = { matcher: ["/dashboard", "/admin", "/userprofile", "/requests", "/denied", "/api/:path*"] };
+//"/api/:path*"

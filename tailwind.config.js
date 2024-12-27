@@ -15,21 +15,30 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      colors: {
+        "btnsecond" : "#457B9D",
+        "btnprimary":"#E63946",
+        "btnhoverp" : "#D62828"
+      },
       textColor: {
         "textdark" : "#1D3557",
         "textmuted" :"#457B9D",
+        // "textwhite" : "#F1FAEE",
+        "textwhite" : "#FFFFFF",
         "text": "#1D3557",
         "links": "#E63946"
       },
       backgroundColor: {
         "base_black":"#1a1b20",
-
-        "headerwhite": "#F1FAEE",
+        "partialbg" : "#457b9d", //background 3/4
+        "white": "#FFFFFF",
         "softblue": "#A8DADC",
         "btnprimary":"#E63946",  //redish
         "btnsecond":"#457b9d", ///dark soft blue
-        "btnhoverp":"#D62828",
+        "btnhoverp": "#BB3131",
+        // "#D62828",
         "btnhovers":"#2B5C75",
+        "bluedark":"#1D3557"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

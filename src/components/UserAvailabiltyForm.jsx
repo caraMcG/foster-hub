@@ -41,7 +41,7 @@ const UserAvailabiltyForm = (props) => {
            
              {/* Submit Changes */}
              <div className='mt-auto text-center'>
-                <button className="px-8 py-4 bg-btnsecond hover:bg-btnhovers  rounded-lg text-white font-semibold" type="submit">
+                <button className="px-8 py-4 bg-btnsecond hover:bg-btnhovers  rounded-lg text-textwhite font-semibold" type="submit">
                     Save Changes
                 </button>
             </div>
