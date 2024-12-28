@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # About The Project
 
-This web app bring togethers all items that a typical animal foster home may need, eliminating any confusion in established processes and an ease of communication between the shelter and the homes. 
+This web app bring togethers all items that a typical animal foster home may need, eliminating any confusion in established processes and providing an ease of communication between the shelter and the homes. 
 
 
 # Built With
@@ -17,7 +17,7 @@ This web app bring togethers all items that a typical animal foster home may nee
 * checklist for path to adoption
 * request forms
 * user home page (contact info, updates, etc..)
-* ~~backend to hold animal/foster test data ~~
+* ~~backend to hold animal/foster test data~~
 * ~~dashboard of current fosters~~
 * if no current fosters, then cards for available fosters
 * profile settings dark/light/etc..
