@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         {/* background */}
         {/* <div className="absolute top-0 left-0 w-full h-1/4 bg-base_black z-0"></div> */}
         {/* main content */}
-        <div className="flex-1 relative">
+        <div className="flex-1-1 relative">
           <Nav session={session} />
         </div>
         <div className="flex justify-center items-center py-12 px-16 relative z-10">

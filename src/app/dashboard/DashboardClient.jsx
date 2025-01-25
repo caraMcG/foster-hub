@@ -33,11 +33,12 @@ const DashboardClient = ({ session }) => {
                     <p className='py-5 text-center'>Hello { session.user.name },<br/>Welcome to your Dashboard!</p>
                     <h2 className='mx-10 py-2 text-xl'>Current Fosters</h2><br/>
                 </Suspense>
+                
                 <section className='flex flex-wrap justify-center gap-20 my-10'>
                     <Suspense fallback={<p>Loading Foster Cards...</p>}>
                         { fosteredAnimals.map((animal) => (
                             
-                                <FosterCard key={animal._id} animal={animal}/>
+                            <FosterCard key={animal._id} animal={animal}/>
                         
                         
                         ))}

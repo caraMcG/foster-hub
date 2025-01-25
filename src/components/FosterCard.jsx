@@ -1,8 +1,19 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
+import DetailsModal from './DetailsModal';
 
 
 const FosterCard = ({ animal }) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   function treatAsUTC(a) {
     var result = new Date(a);
@@ -75,7 +86,12 @@ const FosterCard = ({ animal }) => {
               <input type="checkbox" id={animal._id + 'checklistPhotos'} name="fostercheckList" className='mb-2 leading-tight'/> 
               <label htmlFor="checklistPhotos"> Submitted Photos</label><br/><br/>
               <div className='flex-1 space-x-6'>
-                <button className="py-2 px-4 bg-btnprimary hover:bg-btnhoverp shadow-xl rounded-lg text-center text-white font-bold" type="button">Notes</button>
+                <button className="py-2 px-4 bg-btnprimary hover:bg-btnhoverp shadow-xl rounded-lg text-center text-white font-bold" type="button" onClick={handleOpenModal}>History</button>
+                <DetailsModal 
+                  isOpen={isModalOpen} 
+                  onClose={handleCloseModal}
+                  data = {animal}
+                />
                 <button className="py-2 px-6 bg-btnsecond hover:bg-btnhovers shadow-xl rounded-lg text-center text-white font-bold" type="submit">Save</button>
               </div>
             </fieldset>
