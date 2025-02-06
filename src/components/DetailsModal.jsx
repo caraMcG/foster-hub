@@ -29,6 +29,7 @@ const DetailsModal = ({ isOpen, onClose, data }) => {
                 <p className="text-sm text-gray-500">
                     {/* Below are all current notes available for {data.name}. */}
                 </p>
+                {data.clearanceData.length > 0 ?
                 <div className="table-none md:table-fixed">
                     <table className='w-full text-sm text-left rtl:text-center text-gray-500'>
                         <thead className='text-sm text-gray-700 uppercase text-gray-500'>
@@ -39,19 +40,19 @@ const DetailsModal = ({ isOpen, onClose, data }) => {
                             </tr>
                         </thead>
                         <tbody>
-                    
-                            {data.clearanceData.map((item) => 
-                                item.notes.map((note, index) => ( 
-                                    <tr key={`${item._id}-${index}`} className='bg-white border-b border-gray-400'>
-                                        <th scope="row" className="capitalize pr-6 py-2 font-medium text-gray-900 whitespace-nowrap">{index === 0 ? item.type : null}</th>
-                                        <td className="pr-6 py-2">{note.entry} </td> 
-                                        <td className="pr-6 py-2">{note.entryDate.slice(0,10)}</td>
-                                    </tr>
-                                ))
-                            )}
+                          {data.clearanceData.map((item) => 
+                              item.notes.map((note, index) => ( 
+                                  <tr key={`${item._id}-${index}`} className='bg-white border-b border-gray-400'>
+                                      <th scope="row" className="capitalize pr-6 py-2 font-medium text-gray-900 whitespace-nowrap">{index === 0 ? item.type : null}</th>
+                                      <td className="pr-6 py-2">{note.entry} </td> 
+                                      <td className="pr-6 py-2">{note.entryDate.slice(0,10)}</td>
+                                  </tr>
+                              ))
+                          )}
                         </tbody>
                     </table>
                 </div>
+                : <p className='text-sm text-gray-500'>{data.name} does not have any notes to read.</p>}
               </div>
             </div>
           </div>
