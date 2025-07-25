@@ -29,10 +29,13 @@ export async function GET(req){
         const totalFostered = await Animal.countDocuments({ in_foster: true });
 
         const today = new Date();
+        const oneMonthFromNow = new Date();
+        oneMonthFromNow.setMonth(today.getMonth() + 1);
         // Fetching upcoming events for home page
         const upcomingEvents = await mongoose.models.Event.find({
-            end: { $gte: today } // Fetch events starting from now
-        }).sort({ end: 1 }).limit(3); // Limit to 3 upcoming events
+            end: { $gte: today }, // Fetch events starting from now
+            start: { $lte: oneMonthFromNow } // Fetch events within the next month
+        }).sort({ end: 1 }).limit(5); // Limit to 3 upcoming events
 
         return new Response(JSON.stringify({ totalAnimals, totalFostered, upcomingEvents }),{ status: 200 });
 

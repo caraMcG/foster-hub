@@ -6,9 +6,10 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 
 const UserHomeClient = ({ session }) => {
- const [totalAnimals, setTotalAnimals] = useState(0);
- const [totalinFoster, setTotalinFoster] = useState(0);
- const [upcomingEvents, setUpcomingEvents] = useState([]);
+    const [totalAnimals, setTotalAnimals] = useState(0);
+    const [totalinFoster, setTotalinFoster] = useState(0);
+    const [upcomingEvents, setUpcomingEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
             const fetchData = async () => {
@@ -23,6 +24,8 @@ const UserHomeClient = ({ session }) => {
 
                 }catch(error){
                     console.error('Error fetching total animals/fostered:', error);
+                }finally{
+                    setLoading(false);
                 }
             };
 
@@ -70,10 +73,13 @@ const UserHomeClient = ({ session }) => {
                 </div>
 
                 {/* EVENTS */}
-                <div className='basis-auto text-center'>
+                <div className='flex flex-col gap-4 basis-auto text-center'>
                     <h2 className='font-bold text-lg'>Upcoming Events</h2>
                     <br/>
-                        {upcomingEvents.length >= 0 ?
+
+                    { loading ? (
+                        <p className='p-6 text-center'>Loading upcoming events...</p>
+                    ):  upcomingEvents.length >= 0 ? (
                             
                             upcomingEvents.map(event => (
                                 
@@ -81,6 +87,7 @@ const UserHomeClient = ({ session }) => {
                                 
                                 )
                             )
+                        )   
                     
                         :   <p className='text-center'>
                             Stay tuned for our upcoming events! 
