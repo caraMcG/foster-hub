@@ -26,15 +26,14 @@ const DashboardClient = ({ session }) => {
     },[]);
 
     return (
-        <section className='bg-white rounded-xl px-2 w-3/4 '>
+        <section className='bg-white rounded-xl px-2 w-1/2'>  
+        {/* w-3/4  */}
             {/* border border-slate-300 shadow-sm */}
-            <div>
-                <Suspense fallback={<p className='text-9xl'>Loading Information...</p>}>
-                    <h1 className='py-5 text-center'>Hello { session.user.first_name },<br/>Welcome to your Dashboard!</h1>
-                </Suspense>
+            <div >
+               
                 {fosteredAnimals.length > 0 ?
                     <>
-                        <h2 className='mx-10 py-2 text-xl'>Current Fosters</h2><br/>
+                        <h2 className='mx-10 py-5 text-xl font-bold'>Your Current Fosters</h2><br/>
                         <section className='flex flex-wrap justify-center gap-20 my-10'>
                             
                             <Suspense fallback={<p>Loading Foster Cards...</p>}>

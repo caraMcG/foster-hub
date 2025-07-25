@@ -33,6 +33,7 @@ module.exports = {
         "partialbg" : "#457b9d", //background 3/4
         "white": "#FFFFFF",
         "softblue": "#A8DADC",
+        "softprimaryred": "#EAB1B5",
         "btnprimary":"#E63946",  //redish
         "btnsecond":"#457b9d", ///dark soft blue
         "btnhoverp": "#BB3131",

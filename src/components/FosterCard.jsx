@@ -74,11 +74,11 @@ const FosterCard = ({ animal }) => {
           <form className='flex flex-col'>
             <fieldset>
               <legend className='mb-2'>Checklist to Adoption!</legend>
-              <input disabled type="checkbox" id={animal._id + 'checklistMedical'} name="fostercheckList" className='mb-2 leading-tight'
+              <input disabled readOnly type="checkbox" id={animal._id + 'checklistMedical'} name="fostercheckList" className='mb-2 leading-tight'
                 checked={animal.clearanceData.find((item) => item.type === "medical")?.cleared || false}/>
               <label htmlFor="checklistMedical"> Medical Clear</label> <br/> 
 
-              <input type="checkbox" id={animal._id + 'checklistBehavioural'} name="fostercheckList" className='mb-2 leading-tight'
+              <input readOnly type="checkbox" id={animal._id + 'checklistBehavioural'} name="fostercheckList" className='mb-2 leading-tight'
                 checked = {animal.clearanceData.find((item) => item.type === "behavioural")?.cleared || false}/>
               <label htmlFor="checklistBehavioural"> Behaviour Clear</label> <br/> 
 

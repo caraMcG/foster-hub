@@ -1,3 +1,8 @@
+// This stops the icon flashing behaviour when refreshing the page 
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
+
 import "./globals.css";
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -45,7 +50,7 @@ export default function RootLayout({ children }) {
         <div className="flex-1-1 relative">
           <Nav session={session} />
         </div>
-        <div className="flex justify-center items-center py-12 px-16 relative z-10">
+        <div className="flex justify-center flex-grow items-center py-12 px-16 relative z-10">
           {children}
         </div>
         < Footer/>
