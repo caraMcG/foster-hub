@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import UpcomingEvents from '../../components/UpcomingEvents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import CountUp from 'react-countup';
 
 
 const UserHomeClient = ({ session }) => {
@@ -46,10 +47,14 @@ const UserHomeClient = ({ session }) => {
 
             <div className='flex flex-wrap justify-center gap-20 my-10'>
                 <div className='bg-softblue p-8 rounded-xl shadow-md'>
-                    <p className='text-center rounded-xl text-textdark font-bold text-lg'>{totalAnimals}<br/>Total Animals Helped</p>
+                    <p className='text-center rounded-xl text-textdark font-bold text-lg'>
+                        <CountUp end={totalAnimals} duration={1} delay={0}/>
+                    <br/>Total Animals Helped</p>
                 </div>
                 <div className='bg-softprimaryred p-8 rounded-xl shadow-md'>
-                    <p className='text-center rounded-xl text-links font-bold text-lg'>{totalinFoster}<br/>Currently in Foster Care</p>
+                    <p className='text-center rounded-xl text-links font-bold text-lg'>
+                        <CountUp end={totalinFoster} duration={1} delay={0} />
+                        <br/>Currently in Foster Care</p>
                 </div>
             </div>
             {/* CONTACT NUMBERS */}
