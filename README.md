@@ -14,11 +14,20 @@ This web app bring togethers all items that a typical animal foster home may nee
 
 ## To Do / Goals
 
-* checklist for path to adoption
-* request forms
-* user home page (contact info, updates, etc..)
 * ~~backend to hold animal/foster test data~~
 * ~~dashboard of current fosters~~
+* checklist for path to adoption
+    * Bio 
+    * Photos
+    * Foster release (not intention to adopt your foster animal)
+    * Admin medical & behavioural clearances
+* user home page
+    * Totals (animals helped/in care)
+    * Important numbers
+    * Upcoming events (display upcoming within the month)
+        * create an RSVP system to remind users and provide a total attending to admin
+* requests
+    * forms to request supplies / vet appts/ etc...
 * if no current fosters, then cards for available fosters
 * profile settings dark/light/etc..
 
