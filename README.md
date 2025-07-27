@@ -22,9 +22,9 @@ This web app bring togethers all items that a typical animal foster home may nee
     * Foster release (not intention to adopt your foster animal)
     * Admin medical & behavioural clearances
 * user home page
-    * Totals (animals helped/in care)
-    * Important numbers
-    * Upcoming events (display upcoming within the month)
+    * ~~Totals (animals helped/in care)~~
+    * ~~Important numbers~~
+    * ~~Upcoming events (display upcoming within the month)~~
         * create an RSVP system to remind users and provide a total attending to admin
 * requests
     * forms to request supplies / vet appts/ etc...
