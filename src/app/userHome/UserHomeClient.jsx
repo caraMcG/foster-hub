@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import UpcomingEvents from '../../components/UpcomingEvents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faCircleExclamation, faCalendarDays} from '@fortawesome/free-solid-svg-icons';
 import CountUp from 'react-countup';
 
 
@@ -79,7 +79,10 @@ const UserHomeClient = ({ session }) => {
 
                 {/* EVENTS */}
                 <div className='flex flex-col gap-4 basis-auto text-center'>
-                    <h2 className='font-bold text-lg'>Upcoming Events</h2>
+                    <h2 className='font-bold text-lg'>
+                    <FontAwesomeIcon icon={faCalendarDays} className='w-10 fa-lg'/>
+                        Upcoming Events
+                    </h2>
                     <br/>
 
                     { loading ? (

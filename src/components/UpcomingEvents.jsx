@@ -14,7 +14,7 @@ const UpcomingEvents = ({ event }) => {
                     })}</p>
                 </div>
                 {/* EVENT DETAILS */}
-                <div cassName='flex flex-col flex-grow justify-center'>
+                <div className='flex flex-col flex-grow justify-center'>
                     <h3 className='font-bold text-left'>{event.event_title}</h3>
                     {/* <div className='flex'> */}
                         <p className='text-left'>
@@ -28,11 +28,24 @@ const UpcomingEvents = ({ event }) => {
                                 hour12: true
                             })}
                         </p>
+                        <p className='text-left '>Tail End:  {new Date(event.end).toLocaleDateString('en-US',{
+                            month: 'short',
+                            day: 'numeric'
+                            })} at {new Date(event.end).toLocaleTimeString('en-US',{
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            hour12: true
+                            })}
+                        </p>
                     {/* </div> */}
                 </div>
                 {/* RSVP BUTTON */}
-                <div className='flex items-center justify-end ml-auto'>
-                    <p className='font-bold text-textdark'>RSVP</p>
+                 <div className='flex items-center justify-end ml-auto'>
+                    {event.userHasRSVPed ? (
+                        <button className='font-bold text-red-500'>Cancel RSVP</button>
+                    ) : (
+                        <button className='font-bold text-green-600'>RSVP</button>
+                    )}
                 </div>
             </div>
     );
